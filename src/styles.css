@@ -1,0 +1,28 @@
+:root { --bg:#ffffff; --fg:#222; --muted:#666; --card:#f6f7f9; --line:#e5e7eb; --accent:#2563eb; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0b0d10; --fg:#e6e6e6; --muted:#a4a8ae; --card:#12151a; --line:#242933; --accent:#60a5fa; }
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--fg); }
+.container { max-width: 1200px; margin: 24px auto; padding: 0 16px; }
+header h1 { margin: 0 0 8px; font-size: 24px; }
+.subtitle { margin: 0 0 16px; color: var(--muted); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 18px; }
+.dropzone { border: 2px dashed var(--line); border-radius: 10px; padding: 24px; text-align: center; color: var(--muted); margin-bottom: 10px; }
+.fileRow { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.fileInfo { color: var(--muted); }
+.ghost { background: transparent; border: 1px solid var(--line); color: var(--fg); padding: 6px 10px; border-radius: 8px; cursor: pointer; }
+.controls { display: grid; grid-template-columns: repeat(4, minmax(160px, 1fr)); gap: 12px; align-items: end; }
+.controls .grow { grid-column: span 2; }
+.controls input[type="search"],
+.controls select { width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line); background: #fff0; color: var(--fg); }
+.summary { margin-top: 12px; color: var(--muted); }
+.tableWrap { margin-top: 12px; overflow: auto; border: 1px solid var(--line); border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { border-bottom: 1px solid var(--line); padding: 8px 10px; vertical-align: top; }
+th { background: #00000006; position: sticky; top: 0; }
+.empty { text-align: center; color: var(--muted); padding: 24px 0; }
+.pager { display: flex; gap: 8px; align-items: center; justify-content: center; margin-top: 12px; }
+.pager button { padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: #fff0; color: var(--fg); cursor: pointer; }
+footer { margin-top: 16px; color: var(--muted); }
